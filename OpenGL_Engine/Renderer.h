@@ -5,15 +5,19 @@
 
 #include "Shader.h"
 #include "Program.h"
+#include "Texture.h"
 
 class Renderer
 {
 private:
 	GLuint * vaos;
 	GLuint * vbos;
+	GLuint * ebos;
 	Shader * vertexShader;
 	Shader * fragmentShader;
 	Program * program;
+	Texture2D * texture;
+
 public:
 	Renderer();
 	~Renderer();

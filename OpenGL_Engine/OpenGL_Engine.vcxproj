@@ -74,8 +74,8 @@
     <LibraryPath>D:\chaos\Documents\OpenGL Libs\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\chaos\Documents\OpenGL Libs\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\chaos\Documents\OpenGL Libs\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\dev\opengl\opengl-engine\OpenGL Libs\includes;D:\chaos\Documents\OpenGL Libs\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\dev\opengl\opengl-engine\OpenGL Libs\libs;D:\chaos\Documents\OpenGL Libs\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -94,7 +94,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <UndefinePreprocessorDefinitions>GLFW_INCLUDE_NONE;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -140,6 +141,7 @@
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -148,6 +150,8 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="fragment.shader" />
     <ClInclude Include="Program.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="vertex.shader" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Shader.h" />

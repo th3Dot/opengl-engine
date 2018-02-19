@@ -1,7 +1,5 @@
 #include "Program.h"
 
-
-
 Program::Program()
 {
 	id = glCreateProgram();
